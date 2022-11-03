@@ -1,0 +1,349 @@
+* {
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    transition:.2s;
+    
+  }
+  
+  ul, li {
+    list-style:none;
+  }
+  
+  html, body {
+    width:100%; 
+    height:100%; 
+    font-size:100%; 
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    background:#fff;
+  }
+  
+  section {
+    width:100%; 
+    height:100%;
+  }
+  
+  .wrapper {
+    width:100%; 
+    height:100%;
+  }
+  
+  .top {
+    font-family: 'Josefin Sans', sans-serif;
+    position:relative; 
+    padding:10px; 
+    border-bottom:1px solid #DAE5EB;
+  }
+  
+  .top a {
+    display:inline-block; 
+    padding:5px; 
+    color:#000; 
+    font-size:1.125em; 
+    text-decoration:none;
+  }
+  
+  .util {
+    position:absolute; 
+    top:50%; 
+    right:10px; 
+    margin-top:-18px;
+  }
+  
+  .util li {
+    display:inline-block; 
+    height:34px;
+  }
+  
+  .util li a {
+    display:block;
+    padding:8px 10px 9px; 
+    /*background:#F3F6F8; */
+    /*border:1px solid #F3F6F8; */
+    color:#000; 
+    font-size:0.875em; 
+    text-decoration:none;
+  }
+  
+  .util li a:hover {
+    color:#aaa; 
+    border-top:2px solid #aaa; 
+    transform:translateY(5px);
+  } /*background:#fff; border:1px solid #C8D7E1; */
+  
+  .mycontainer {
+    height:calc(100% - 55px); 
+    padding:10px; background:#F3F6F8;
+    overflow: auto;
+  }
+  
+  .mycontainer:after {
+    content:''; 
+    clear:both; 
+    display:block;
+  }
+  
+  .tab-menu {
+    float:left; 
+    width:auto; 
+    height:auto; 
+    display:inline-block;
+  }
+  
+  .tab-menu ul {
+    font-size:0;
+  }
+  
+  .tab-menu ul li {
+    display:block; 
+    margin-bottom:2px;
+  }
+  
+  .tab-menu ul li a {
+    display:block; 
+    padding:10px 20px; 
+    border-radius:5px; 
+    background:#333; 
+    color:#fff; 
+    font-size:14px; 
+    text-decoration:none;
+  }
+  
+  .tab-menu ul li a:hover {
+    background:#555; 
+    color:#fff; 
+    transform:translateX(5px);
+  }
+  
+  .tab-menu ul li.on a {
+    background:#bbb; 
+    color:#000;
+    transform:translateX(3px);
+  }
+  
+  .content {
+    float:right; 
+    display:none;
+    width:calc(100% - 160px);
+    height:100%; 
+    padding:0 28px; 
+    background:#FFF; 
+    border:1px solid #DAE5EB;
+    overflow: auto;
+  }
+  
+  h1 {
+    padding:18px 0 15px; 
+    font-size:1.563em;
+  }
+  
+  article {
+    line-height:120%;
+  }
+  
+  .on {
+    display:block;
+  }
+  
+  @media(max-width:700px){
+    .content {
+      float:right; 
+      width:calc(100% - 45px);
+      height:100%; 
+      padding:0 28px; 
+      background:#FFF; 
+      border:1px solid #DAE5EB;
+    }
+    
+    .tab-menu {
+      float:left; 
+      width:calc(100% - 618px); 
+      height:auto; 
+      display:inline-block;
+    }
+    
+    .tab-menu b{
+      display:none;
+    }
+    
+    .tab-menu i{
+      margin-left: -8px;
+    }
+  }
+  
+  @media(max-width:360px){
+    .content h5 {
+      font-size: 18px;
+    }
+  }
+  
+  @media(max-width:285px){
+    .content h1{
+      font-size: 20px;
+    }
+  }
+  
+  /* TABELA */
+  
+  table {
+    font-family: arial;
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .table { 
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .atencao {
+    color: red;
+  }
+  
+  .button {
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #89dac1;
+    border: none;
+    color: #000;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 14px;
+  }
+  
+  .button:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .table th {
+    font-weight: bold;
+  }
+  
+  .table th,
+  .table td {
+    font-size: 12px;
+    padding: 8px 15px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+  }
+  .table thead th {
+    background: #333;
+    color: #fff;
+    vertical-align: bottom;
+  }   
+  .table tbody > tr:nth-child(odd) > td,
+  .table tbody > tr:nth-child(odd) > th {
+    background-color: #777;
+  }    
+  .table .t-small {
+    width: 5%;
+  }
+  .table .t-medium {
+    width: 15%;
+  }
+  .table .t-status {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 480px) { 
+    .table-action thead {
+      display: none;
+    }
+    .table-action tr {
+      border-bottom: 1px solid #dddddd;
+    }
+    .table-action td {
+      border: 0;
+    }
+    .table-action td:not(:first-child) {
+      display: block;
+    }
+  }
+  
+  /* EDITAR DADOS */
+  
+  textarea {
+      resize: none;
+  }
+  .form-label {
+      font-size: 12px;
+      color: #5e9bfc;
+      margin: 0;
+      display: block;
+      opacity: 1;
+      -webkit-transition: .333s ease top, .333s ease opacity;
+      transition: .333s ease top, .333s ease opacity;
+  }
+  .form-control {
+      border-radius: 0;
+      border-color: #ccc;
+    border-width: 0 0 2px 0;
+    border-style: none none solid none;
+    box-shadow: none;
+  }
+  .form-control:focus {
+      box-shadow: none;
+      border-color: #5e9bfc;
+  }
+  .js-hide-label {
+      opacity: 0; 	
+  }
+  .js-unhighlight-label {
+      color: #999 
+  }
+  .btn-start-order {
+      background: 0 0 #ffffff;
+    border: 1px solid #2f323a;
+    border-radius: 3px;
+    color: #2f323a;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: inherit;
+    margin: 30px 0;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    transition: all 0.25s ease 0s;
+  }
+  .btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
+      border-color: #000;
+    background-color: #bbb;
+      color: #000;
+    font-weight: bold;
+  }
