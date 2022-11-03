@@ -50,7 +50,7 @@ function desenharJogo(){
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     //Estiliza a Cobra
-    ctx.fillStyle = "lime";
+    ctx.fillStyle = "yellow";
     for (i = 0; i < tamanhoCobra.length; i++){
         ctx.fillRect(
             tamanhoCobra[i].x * tamanhoCaminho,
@@ -63,7 +63,7 @@ function desenharJogo(){
         }
     }
     //Estiliza a Fruta
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "lime";
     ctx.fillRect(
         frutaX * tamanhoCaminho, 
         frutaY * tamanhoCaminho, 
